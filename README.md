@@ -84,7 +84,7 @@ Repeat from Week 7.
 
 ## Data understanding & Preprocessing:
 
-	* What can of Dataset do we have? (Tabular!!)
+	* What kind of Dataset do we have? (Tabular!!)
 	* How data are represented? (Categorical data represented Numerically through 0s and 1s)
 	* Mention NA values count. (Count of NA values)
 	* Mention Outliers. 
