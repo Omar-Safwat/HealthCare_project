@@ -13,9 +13,8 @@ Data Glacier Project
 # Project Outline (Will be updated Weekly)
 
 # Week 7:
-========
 
-A] Problem Description: 
+## Problem Description: 
 
 - What is the problem. 
 - What are the challenges. 
@@ -26,32 +25,32 @@ A] Problem Description:
 	3- Clinical Factors <More detail about the measurements, what is the T-score metioned.>
 ---------------------------------------------------------------------------------------------------
 
-B] Project Lifecycle
+## Project Lifecycle
 
 -Gant Chart by Roger.
 ---------------------------------------------------------------------------------------------------
 
-C] Data Intake report:
+## Data Intake report:
 
 -How data was ingested into our notebook.
 -Summary of Data size and features...etc.
 ---------------------------------------------------------------------------------------------------
 
-D] Github Repo Link
+## Github Repo Link
 ---------------------------------------------------------------------------------------------------
 
 
 
 # Week 8:
-=======
-A] Problem Description:
+
+## Problem Description:
 
 Repeat from Week 7.
 ---------------------------------------------------------------------------------------------------
 
-B] Data understanding:
+## Data understanding:
 
-1- Data Understanding & Preprocessing:
+### Data Understanding & Preprocessing:
 
 	- What can of Dataset do we have? (Tabular!!)
 	- How data are represented? (Categorical data represented Numerically through 0s and 1s)
@@ -59,5 +58,5 @@ B] Data understanding:
 	- Mention Outliers. 
 	- Exploratory Analysis (Variation in data through box plots and histograms..SweetViz is awesome!)
 
-NOTE: Week 9 Deliverables state that we should attempt to deal with NAs through Imputing. So we shouldn't discrad them completely now. 
+**NOTE:** Week 9 Deliverables state that we should attempt to deal with NAs through Imputing. So we shouldn't discrad them completely now. 
 We could just keep week 8 deliverables as Descriptive as possible (What we've seen in the data, and the insights we have.)
