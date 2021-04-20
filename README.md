@@ -17,12 +17,14 @@ Data Glacier Project
 Markdown Heading: Week N
 
 ```{python}
+# Python Code
 # Data Preprocessing or Data Intake..etc
 
 ```
 Markdown Heading: Week N+1
 
 ```{python}
+# Python Code
 # Exploratory analysis...etc
 
 ```
@@ -30,6 +32,7 @@ Markdown Heading: Week N+1
 Markdown Heading: Week N+2
 
 ```{python}
+# Python Code
 # Machine Learning Model
 
 ```
@@ -37,6 +40,7 @@ Markdown Heading: Week N+2
 Markdown Heading: Week N+3
 
 ```{python}
+# Python Code
 # Web App
 
 ```
