@@ -4,12 +4,42 @@ Data Glacier Project
 # Repo Master Branch Structure
 
 * Notebook for each Week.
-* Notebook for each team member called "<Your name>-Findings", which should be updated on a **weekly** basis.
+* General Notebook just for **python code.** 
+	* Contains final code from all weeks, and we will update it weekly. Refer to its section for proposed structure.
+* Notebook for each team member called "<YourName>-Findings", which should be updated on a **weekly** basis.
   * It will hold work and research you did by yourself.
   * It'll be mainly used for future reference by other team mates. (For example I would like to take another look at the analysis team mate 1 did last week, for my work.)
   * Don't delete your old work, append new cells to your notebook (Markdown, or Python) as you see fit, add headings (# Week 7...# Week 8..etc).
 * Presentation slides.
 
+# Python Code Notebook Structure: Example!
+
+Markdown Heading: Week N
+
+```{python}
+# Data Preprocessing or Data Intake..etc
+
+```
+Markdown Heading: Week N+1
+
+```{python}
+# Exploratory analysis...etc
+
+```
+
+Markdown Heading: Week N+2
+
+```{python}
+# Machine Learning Model
+
+```
+
+Markdown Heading: Week N+3
+
+```{python}
+# Web App
+
+```
 # Project Outline (Will be updated Weekly)
 
 # Week 7:
