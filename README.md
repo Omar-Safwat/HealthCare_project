@@ -23,40 +23,38 @@ Data Glacier Project
 	1- Demographics
 	2- Provider Attributes
 	3- Clinical Factors <More detail about the measurements, what is the T-score metioned.>
----------------------------------------------------------------------------------------------------
+
 
 ## Project Lifecycle
 
--Gant Chart by Roger.
----------------------------------------------------------------------------------------------------
+ Gant Chart by Roger.
+
 
 ## Data Intake report:
 
--How data was ingested into our notebook.
--Summary of Data size and features...etc.
----------------------------------------------------------------------------------------------------
+* How data was ingested into our notebook.
+* Summary of Data size and features...etc.
+
 
 ## Github Repo Link
----------------------------------------------------------------------------------------------------
+
 
 
 
 # Week 8:
 
-## Problem Description:
+## Problem Description
 
 Repeat from Week 7.
----------------------------------------------------------------------------------------------------
 
-## Data understanding:
 
-### Data Understanding & Preprocessing:
+## Data understanding & Preprocessing:
 
-	- What can of Dataset do we have? (Tabular!!)
-	- How data are represented? (Categorical data represented Numerically through 0s and 1s)
-	- Mention NA values count. (Count of NA values)
-	- Mention Outliers. 
-	- Exploratory Analysis (Variation in data through box plots and histograms..SweetViz is awesome!)
+	* What can of Dataset do we have? (Tabular!!)
+	* How data are represented? (Categorical data represented Numerically through 0s and 1s)
+	* Mention NA values count. (Count of NA values)
+	* Mention Outliers. 
+	* Exploratory Analysis (Variation in data through box plots and histograms..SweetViz is awesome!)
 
 **NOTE:** Week 9 Deliverables state that we should attempt to deal with NAs through Imputing. So we shouldn't discrad them completely now. 
 We could just keep week 8 deliverables as Descriptive as possible (What we've seen in the data, and the insights we have.)
