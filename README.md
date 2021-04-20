@@ -3,12 +3,12 @@ Data Glacier Project
 
 # Repo Master Branch Structure
 
-1. Notebook for each Week.
-2. Notebook for each team member called "<Your name>-Findings", which should be updated on a **weekly** basis.
+* Notebook for each Week.
+* Notebook for each team member called "<Your name>-Findings", which should be updated on a **weekly** basis.
   * It will hold work and research you did by yourself.
   * It'll be mainly used for future reference by other team mates. (For example I would like to take another look at the analysis team mate 1 did last week, for my work.)
   * Don't delete your old work, append new cells to your notebook (Markdown, or Python) as you see fit, add headings (# Week 7...# Week 8..etc).
-3. Presentation slides.
+* Presentation slides.
 
 # Project Outline (Will be updated Weekly)
 
