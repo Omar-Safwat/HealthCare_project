@@ -50,13 +50,13 @@ Markdown Heading: Week N+3
 
 ## Problem Description: 
 
-- What is the problem. 
-- What are the challenges. 
-- The disease in question. 
-- Mention the variations in 
-	1- Demographics
-	2- Provider Attributes
-	3- Clinical Factors <More detail about the measurements, what is the T-score metioned.>
+* What is the problem. 
+* What are the challenges. 
+* The disease in question. 
+* Mention the variations in 
+	* Demographics
+	* Provider Attributes
+	* Clinical Factors <More detail about the measurements, what is the T-score metioned.>
 
 
 ## Project Lifecycle
