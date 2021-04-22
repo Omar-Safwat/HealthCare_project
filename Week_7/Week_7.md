@@ -14,11 +14,13 @@
 
 # Problem description 
 
+Patients in the dataset are suffering from NTM, according to [Wikipedia](https://en.wikipedia.org/wiki/Nontuberculous_mycobacteriaNontuberculous), mycobacteria (NTM), also known as environmental mycobacteria, atypical mycobacteria and mycobacteria other than tuberculosis (MOTT), are mycobacteria which do not cause tuberculosis or leprosy (also known as Hansen's disease). NTM do cause pulmonary diseases that resemble tuberculosis. The most common clinical manifestation of NTM disease is lung disease, but lymphatic, skin/soft tissue, and disseminated diseases are also important. Clinical symptoms vary in scope and intensity, but commonly include chronic cough, often with purulent sputum. Diagnosis of opportunistic mycobacteria is made by repeated isolation and identification of the pathogen with compatible clinical and radiological features. Pulmonary NTM disease diagnosis requires both identification of the mycobacterium in the patient's lung(s), as well as a high-resolution CT scan of the lungs.
+
 Failure to adhere to prescribed-medication regimens is one of the principal reasons patients don’t achieve the expected outcomes from their treatment. Solving this challenge has been a major goal for pharmaceutical and healthcare organizations for decades. Studies show that 50 to 60 percent of patients with chronic illnesses miss doses, take the wrong doses, or drop off treatment in the first year. An estimated 125,000 lives are lost annually in the United States and additional healthcare expenditures of 290 billion USD are driven by nonadherence.<br>
 
 In order to gather insights on the factors affecting drug persistency among patients, as per physician's prescription, a dataset is to be collected, investigated and analyzed. To automate this process for a pharmaceutical company, a machine learning classification model is subsequently built and deployed as a WebApp.<br>
 
-Patients in the dataset are suffering from NTM, are environmental organisms that can be found in soil, dust, and water including natural water sources, causing pulmonary diseases that resemble tuberculosis.
+
 
 
 # Business understanding
