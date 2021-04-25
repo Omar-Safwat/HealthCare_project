@@ -34,7 +34,7 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
 - We can replace all “Yes”/”No” as 1/0 and for each other column that does not contain numerical values ('Persistency_Flag', 'Race','Ethnicity','Region','Age_Bucket','Ntm_Speciality','Ntm_Specialist_Flag','Ntm_Speciality_Bucket','Risk_Segment_Prior_Ntm', 'Tscore_Bucket_Prior_Ntm', 'Risk_Segment_During_Rx', 'Tscore_Bucket_During_Rx', 'Change_T_Score', 'Change_Risk_Segment', 'Adherent_Flag'). We can make a different column containing the corresponding numerical label obtained using LabelEncoder
 - Data is labelled and “Persistency_Flag” feature will serve as the label for ML model
 - Missing values are present as "Unknown" or "Other/Unknown" in following features: "Race", "Ethnicity", "Region", "NTM_Speciality",
-    "Risk_Segment_During_Rx","Column Tscore_Bucket_During_Rx", "Change_T_Score", "Change_Risk_Segment".
+    "Risk_Segment_During_Rx","Tscore_Bucket_During_Rx", "Change_T_Score", "Change_Risk_Segment".
 - Outliers are present in the following features:  
     - Gender: predominant females, the rest outliers
     - Race:  predominant Caucasian, the rest outliers
