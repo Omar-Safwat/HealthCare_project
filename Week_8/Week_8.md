@@ -27,7 +27,7 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
 
 # Data understanding
 
-**Key dataset characteristic are as following:
+**Key dataset characteristic are as following:**
 - 69 features
 - 3424 data entries
 - 99% features are provided as categorical data and we need to turn them into numerical before feeding into ML model (e.g. “Yes”/”No” as 1/0, NTM_Speciality as dictionary), only one feature has numerical values ("Count_Of_Risks")
@@ -62,16 +62,16 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
 
 ## Missing values (NaN or Unknown in our case)
 
-**Why NaN values are problematic?
+**Why NaN values are problematic?**
 - we cannot train data
 - data is not informative<br>
 
-**Dealing with NaN values:
+**Dealing with NaN values:**
  - delete them
  - predict them (using regression technique) or impute them (using KNN technique)
  - relace them with the category that has the highest ocuurence (mode)<br>
 
-**We may distinguish some cases:
+**We may distinguish some cases:**
 1. NaN values occurence is higher than the other column categories.
    Example 3 classes, NaN values occurence is the highest and the other 2 categories occurencies have almost
    similar dirtibution:
@@ -84,11 +84,11 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
 
 ## Outliers
 
-**Why the outliers are a problem?
+**Why the outliers are a problem?**
 
 They do not contribute to model learning. The values are irrelevat and the model will only learn the dominant cathegories. Large data slows down the training time, and for no reason.<br>
 
-**Dealing with outliers: 
+**Dealing with outliers:** 
 
 1. If for example there are only two categorical values in a feature and one of the features has very few values that can be considered outliers, it would be a good idea to not consider at all those columns when training and delete columns entirely. Because dominant data will determine learning only one category, it will not influence learning, but it contributes to speeding training time. It this case, we may delete the following columns: 'Gender','Risk_Type_1_Insulin_Dependent_Diabetes','Risk_Osteogenesis_Imperfecta','Risk_Rheumatoid_Arthritis','Risk_Untreated_Chronic_Hyperthyroidism','Risk_Untreated_Chronic_Hypogonadism','Risk_Untreated_Early_Menopause','Risk_Patient_Parent_Fractured_Their_Hip','Risk_Chronic_Liver_Disease','Risk_Low_Calcium_Intake','Risk_Poor_Health_Frailty','Risk_Excessive_Thinness','Risk_Hysterectomy_Oophorectomy','Risk_Estrogen_Deficiency','Risk_Immobilization','Risk_Recurring_Falls'<br>
 
