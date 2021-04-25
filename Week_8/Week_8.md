@@ -37,29 +37,29 @@ Key dataset characteristic are as following:
 - Missing values are present as "Unknown" or "Other/Unknown" in following features: "Race", "Ethnicity", "Region", "NTM_Speciality",
     "Risk_Segment_During_Rx","Column Tscore_Bucket_During_Rx", "Change_T_Score", "Change_Risk_Segment".
 - Outliers are present in the following features:  
- - Gender : predominant females, the rest outliers
- - Race:  predominant Caucasian, the rest outliers
- - Ethnicity: predonimamnt Not hispanic, the rest outliers
- - Region: cathegory other outliers
- - Ntm_specialty : predonimant categories: general_preactitioner, unknoen, endocrinology, rheumatology, oncology, obstretics and gynecology; the rest outliers
- - Dexa_freq_during_rx : predominant : 0; the rest outliers
- - Adherent_flag: predominant adherent;  the rest outliers
- - Risk_Type_1_Insulin_Dependent_Diabetes: predominant False(0); True(1) outlier
- - Risk_Osteogenesis_Imperfecta: predominant False; True outlier
- - Risk_Rheumatoid_Arthritisitis: predominant False; True outlier
- - Risk_Untreated_Chronic_Hyperthyroidism: predominant False; True Outlier
- - Risk_Untreated_Chronic_Hypogonadism: predominant False; True Outlier
- - Risk_Untreated_Early_Menopause: predominant False; True Outlier
- - Risk_Patient_Parent_Fractured_Their_Hip: predominant False; True Outlier
- - Risk_Chronic_Liver_Disease: predominant False; True Outlier
- - Risk_Low_Calcium_Intake :predominant False; True Outlier
- - Risk_Poor_Health_Frailty: predominant False; True Outlier
- - Risk_Excessive_Thinness: predominant False; True Outlier
- - Risk_Hysterectomy_Oophorectomy: predominant False; True Outlier
- - Risk_Estrogen_Deficiency: predominant False; True Outlier
- - Risk_Immobilization : predominant False; True Outlier
- - Risk_Recurring_Falls: predominant False; True Outlier
- - Count_of_risks: 5,6,7 outliers
+         - Gender : predominant females, the rest outliers
+         - Race:  predominant Caucasian, the rest outliers
+         - Ethnicity: predonimamnt Not hispanic, the rest outliers
+         - Region: cathegory other outliers
+         - Ntm_specialty : predonimant categories: general_preactitioner, unknoen, endocrinology, rheumatology, oncology, obstretics and gynecology; the rest outliers
+         - Dexa_freq_during_rx : predominant : 0; the rest outliers
+         - Adherent_flag: predominant adherent;  the rest outliers
+         - Risk_Type_1_Insulin_Dependent_Diabetes: predominant False(0); True(1) outlier
+         - Risk_Osteogenesis_Imperfecta: predominant False; True outlier
+         - Risk_Rheumatoid_Arthritisitis: predominant False; True outlier
+         - Risk_Untreated_Chronic_Hyperthyroidism: predominant False; True Outlier
+         - Risk_Untreated_Chronic_Hypogonadism: predominant False; True Outlier
+         - Risk_Untreated_Early_Menopause: predominant False; True Outlier
+         - Risk_Patient_Parent_Fractured_Their_Hip: predominant False; True Outlier
+         - Risk_Chronic_Liver_Disease: predominant False; True Outlier
+         - Risk_Low_Calcium_Intake :predominant False; True Outlier
+         - Risk_Poor_Health_Frailty: predominant False; True Outlier
+         - Risk_Excessive_Thinness: predominant False; True Outlier
+         - Risk_Hysterectomy_Oophorectomy: predominant False; True Outlier
+         - Risk_Estrogen_Deficiency: predominant False; True Outlier
+         - Risk_Immobilization : predominant False; True Outlier
+         - Risk_Recurring_Falls: predominant False; True Outlier
+         - Count_of_risks: 5,6,7 outliers
 <br>
 Why NaN values are problematic?
  - We cannot train data
@@ -76,10 +76,10 @@ We may distinguish some cases:
     Example 3 classes, NaN values occurence is the highest and the other 2 categories occurencies have almost
     similar dirtibution:
          - Relacing the NaN values with the category that has the highest ocuurence (mode), we influence learning on
-           only one category. ---> not a good idea
+           only one category. ---> Not a good idea
          - We may delete them  ----> we can lose data, so it is not recommended
          - We may predict them ---> try and compare with mode data result; if the result are similar it is recommended to used mode as training is time consuming
-2. NaN values occurence is very lower than the other column categories. -> in this case it is definitely suitable to use mode 
+2. NaN values occurence is very lower than the other column categories. -> in this case it is definitely  suitable to use mode 
   
 Why the outliers are a problem?
 
