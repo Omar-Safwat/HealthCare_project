@@ -19,17 +19,25 @@
 A machine learning model cannot be built without sufficient data. Quality data is fundamental to any data science engagement. To gain actionable insights, the appropriate data must be sourced and cleansed. There are two key stages of Data Understanding: a Data Assessment and Data Exploration. Our team provides Data Understanding insights within week 9 assignment.<br>
 
 The Pharmaceutical company provided dataset called “Healthcare_dataset” in xlsx format consisting of:
-- Missing data in total: .......
+- Missing data in total: 7278 values which means 3%
 - Outliers in total: .......<br>
 
 
 # Data cleansing and transformation - techniques description
 
 
+
 ## Missing values (NaN or Unknown in our case)
 
 **Larisa approach**
-............ <br>
+1. Predicting NaN values using Logistic Regression.<br> 
+
+Problems encountered:<br> 
+
+It was a little dificult to predict each column which contained NaN values at a time and at the same time to consider all the other features because some other columns may also contain NaN values. It was not possible also to build multi-class model prediction as column that contained NaN values had always diffrent data training. It not always happened to have one row that contained multiple NaN values placed in multiple columns. The problem was solved by not considering the columns that also contained NaN values and succeed to predict one at a time.
+
+Results:<br> 
+As it was expected, the columns that had dominant target classes turned to be the most frequent predicted value. In those cases, it would have been easier just to apply mode and not model training as the results are pretty similar. <br>
 
 **Afshan approach**
 ............ <br>
@@ -43,16 +51,63 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
   
 ## Outliers
 
-**Omar approach**
-............ <br> 
+**Omar approach**<br> 
+
+
+**Larisa approach**<br> 
+There have been 2 ways of dealing with outliers:<br> 
+1. Deleting entirely the columns that has only 2 classes and one class has >90% frequency.<br> 
+2. Deleting the rows that contained outliers. <br> 
 
 ## Dealing with many features
+Dataset original shape:  3424  rows, 69 fetures<br>
 
-Suggestion which features should be considered for modelling:
-- ....
-- ....
-- ....<br>
+Suggestion which features should be considered for modelling:<br>
+- after dealing with NaN and outliers the data ready for trainig has the following shape:<br>
+2004 rows, 52 features: <br>
+       'Gluco_Record_Prior_Ntm', 'Gluco_Record_During_Rx',
+       'Dexa_Freq_During_Rx', 'Dexa_During_Rx', 'Frag_Frac_Prior_Ntm',
+       'Frag_Frac_During_Rx', 'Idn_Indicator',
+       'Injectable_Experience_During_Rx',
+       'Comorb_Encounter_For_Screening_For_Malignant_Neoplasms',
+       'Comorb_Encounter_For_Immunization',
+       'Comorb_Encntr_For_General_Exam_W_O_Complaint,_Susp_Or_Reprtd_Dx',
+       'Comorb_Vitamin_D_Deficiency',
+       'Comorb_Other_Joint_Disorder_Not_Elsewhere_Classified',
+       'Comorb_Encntr_For_Oth_Sp_Exam_W_O_Complaint_Suspected_Or_Reprtd_Dx',
+       'Comorb_Long_Term_Current_Drug_Therapy', 'Comorb_Dorsalgia',
+       'Comorb_Personal_History_Of_Other_Diseases_And_Conditions',
+       'Comorb_Other_Disorders_Of_Bone_Density_And_Structure',
+       'Comorb_Disorders_of_lipoprotein_metabolism_and_other_lipidemias',
+       'Comorb_Osteoporosis_without_current_pathological_fracture',
+       'Comorb_Personal_history_of_malignant_neoplasm',
+       'Comorb_Gastro_esophageal_reflux_disease',
+       'Concom_Cholesterol_And_Triglyceride_Regulating_Preparations',
+       'Concom_Narcotics', 'Concom_Systemic_Corticosteroids_Plain',
+       'Concom_Anti_Depressants_And_Mood_Stabilisers',
+       'Concom_Fluoroquinolones', 'Concom_Cephalosporins',
+       'Concom_Macrolides_And_Similar_Types',
+       'Concom_Broad_Spectrum_Penicillins', 'Concom_Anaesthetics_General',
+       'Concom_Viral_Vaccines', 'Risk_Smoking_Tobacco',
+       'Risk_Chronic_Malnutrition_Or_Malabsorption',
+       'Risk_Family_History_Of_Osteoporosis', 'Risk_Vitamin_D_Insufficiency',
+       'Count_Of_Risks', 'Persistency_Flag_labels', 'Race_labels',
+       'Ethnicity_labels', 'Region_labels', 'Age_Bucket_labels',
+       'Ntm_Speciality_labels', 'Ntm_Specialist_Flag_labels',
+       'Ntm_Speciality_Bucket_labels', 'Risk_Segment_Prior_Ntm_labels',
+       'Tscore_Bucket_Prior_Ntm_labels', 'Risk_Segment_During_Rx_labels',
+       'Tscore_Bucket_During_Rx_labels', 'Change_T_Score_labels',
+       'Change_Risk_Segment_labels', 'Adherent_Flag_labels'<br>
+
+- We also tried to analise feature relatedness in order to figure out what features would have impact when training. Corelation matrix was not very realiable in this case. As an alternative, we tried PCA dimension reduction algorithm in the hope of finding the number of the features tha lead to best results when training. The results showed that all 52 features have a big influence when training.<br>
 
 # Dataset for EDA and modelling
 
 As part of week 9 team worked out the data set for EDA and further modelling.<br>
+
+EDA dataset: 
+    cleaned_data.csv - This dataset has no NaN values and no outliers. The NaN values have been replced by the reults obtained from prediction. The outliers have been elimanted as described above. This dataset contains the values in the original format, but also in numerical labeled format.
+    
+Training dataset:
+    data_training.csv - This dataset contains only numerical values.
+
