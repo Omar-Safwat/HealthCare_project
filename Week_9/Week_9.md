@@ -20,7 +20,7 @@ A machine learning model cannot be built without sufficient data. Quality data i
 
 The Pharmaceutical company provided dataset called “Healthcare_dataset” in xlsx format consisting of:
 - Missing data in total: 7278 values which means 3%
-- Outliers in total: .......<br>
+- Outliers in total: in 23 of 69 features which means 33%<br>
 
 
 # Data cleansing and transformation - techniques description
@@ -30,6 +30,7 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
 ## Missing values (NaN or Unknown in our case)
 
 **Larisa approach**
+[Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)
 1. Predicting NaN values using Logistic Regression.<br> 
 
 Problems encountered:<br> 
@@ -44,7 +45,29 @@ As it was expected, the columns that had dominant target classes turned to be th
 
 **Roger approach**
 [KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/Week_9/knn_imputation_by_concomb.ipynb)
-............ <br> 
+KNN Imputer from sklearn library was used to deal with missing values in Ntm_Speciality feature.
+
+Ntm_Speciality had before Imputation 36 categories, among them “Unknown”. This lead to an observation that "unknown" should be distributed among 35 other specialties and perhaps consequently KNN Imputer supposes to take 35 neighbors wile dealing with missing values. Therefore, two Imputation were made over “Unknown” from Ntm_Speciality, one with 5 neighbors, other with 35, as KNN Imputer setting.
+
+Second issue was related to features that should be taken into common array. After deliberation all features called “Concomb*” were taken as then seem to be the most relevant to Ntm_Speciality because they represent health issues. Then these features were transformed to numerical. No was represented by 0 and yes as 1. A dictionary was created for Ntm_Speciality which helped to translated this features both ways, from categorical to numerical – for KNN Imputation, and from numerical to categorical – for post imputation needs e.g. merging new dataframe with ABC Company dataset.
+
+It was insightful that KNN Imputer transforms all data into floats and after imputation missing data might be distributed as floats while we need them to be integers to be translated into categories. There are two ways of dealing with this: rounding up or cutting decimals. Rounding up according to arithmetical rules was applied.
+
+Full comparison of original Ntm_Speciality and after work of KNN Imputer is presented on the linked [pdf](https://github.com/Omar-Safwat/HealthCare_project/Week_9/knn_imputation_by_concomb_comparision.pdf).
+
+Apart from number of neighbors unknown were distributed only over top 9 categories, as following:
+| Ntm_Speciality | Original DF | After KNN 5 neigh. | After KNN 35 neigh. |
+| :--- | --- | --- | --- | 
+| GENERAL PRACTITIONER | 1535 | 1585 | 1538 |
+| RHEUMATOLOGY | 604 | 752 | 786 |
+| ENDOCRINOLOGY | 458 | 520 | 574 |
+| ONCOLOGY | 225 | 254 | 234 |
+| OBSTETRICS AND GYNECOLOGY | 90 | 101 | 90 |
+| UROLOGY | 33 | 36 | 33 |
+| ORTHOPEDIC SURGERY | 30 | 34 | 30 |
+| CARDIOLOGY | 22 | 24 | 22 |
+| PATHOLOGY | 16 | 17 | 16 |
+<br> 
 
 **Omar approach**
 ............ <br> 
@@ -55,6 +78,7 @@ As it was expected, the columns that had dominant target classes turned to be th
 
 
 **Larisa approach**<br> 
+[Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)
 There have been 2 ways of dealing with outliers:<br> 
 1. Deleting entirely the columns that has only 2 classes and one class has >90% frequency.<br> 
 2. Deleting the rows that contained outliers. <br> 
