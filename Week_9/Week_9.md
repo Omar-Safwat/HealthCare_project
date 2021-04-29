@@ -31,7 +31,7 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
 
 **Larisa approach**
 [Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)
-1. Predicting NaN values using Logistic Regression.<br> 
+1. Predicting NaN values using Logistic Regression. As target values are categorical the problem was a classification one and I used linear regression as algorithm.<br> 
 
 Problems encountered:<br> 
 
