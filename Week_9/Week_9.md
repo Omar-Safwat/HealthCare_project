@@ -44,7 +44,8 @@ As it was expected, the columns that had dominant target classes turned to be th
 ............ <br>
 
 **Roger approach**
-[KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/Week_9/knn_imputation_by_concomb.ipynb)
+[KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/Week_9/knn_imputation_by_concomb.ipynb)<br>
+**Omar approach:** [KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/Week_9/Omar_KNN.ipynb)<br>
 KNN Imputer from sklearn library was used to deal with missing values in Ntm_Speciality feature.
 
 Ntm_Speciality had before Imputation 36 categories, among them “Unknown”. This lead to an observation that "unknown" should be distributed among 35 other specialties and perhaps consequently KNN Imputer supposes to take 35 neighbors wile dealing with missing values. Therefore, two Imputation were made over “Unknown” from Ntm_Speciality, one with 5 neighbors, other with 35, as KNN Imputer setting.
@@ -68,14 +69,8 @@ Apart from number of neighbors unknown were distributed only over top 9 categori
 | CARDIOLOGY | 22 | 24 | 22 |
 | PATHOLOGY | 16 | 17 | 16 |
 <br> 
-
-**Omar approach**
-............ <br> 
   
 ## Outliers
-
-**Omar approach**<br> 
-
 
 **Larisa approach**<br> 
 [Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)
