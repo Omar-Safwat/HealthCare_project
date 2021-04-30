@@ -25,12 +25,13 @@ The Pharmaceutical company provided dataset called “Healthcare_dataset” in x
 
 # Data cleansing and transformation - techniques description
 
-
-
 ## Missing values (NaN or Unknown in our case)
 
 **Larisa approach**
-[Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)
+[Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/blob/main/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)<br>
+**Afshan approach**
+[Missing value prediction](https://github.com/Omar-Safwat/HealthCare_project/blob/main/Week_9/Afshan%20missing%20value%20prediction.ipynb)
+
 1. Predicting NaN values using Logistic Regression. As target values are categorical the problem was a classification one and I used linear regression as algorithm.<br> 
 
 Problems encountered:<br> 
@@ -40,12 +41,10 @@ It was a little dificult to predict each column which contained NaN values at a 
 Results:<br> 
 As it was expected, the columns that had dominant target classes turned to be the most frequent predicted value. In those cases, it would have been easier just to apply mode and not model training as the results are pretty similar. <br>
 
-**Afshan approach**
-............ <br>
-
 **Roger approach**
-[KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/Week_9/knn_imputation_by_concomb.ipynb)<br>
-**Omar approach:** [KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/Week_9/Omar_KNN.ipynb)<br>
+[KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/blob/main/Week_9/knn_imputation_by_concomb.ipynb)<br>
+**Omar approach:** [KNN Imputation](https://github.com/Omar-Safwat/HealthCare_project/blob/main/Week_9/Omar_KNN.ipynb)<br>
+
 KNN Imputer from sklearn library was used to deal with missing values in Ntm_Speciality feature.
 
 Ntm_Speciality had before Imputation 36 categories, among them “Unknown”. This lead to an observation that "unknown" should be distributed among 35 other specialties and perhaps consequently KNN Imputer supposes to take 35 neighbors wile dealing with missing values. Therefore, two Imputation were made over “Unknown” from Ntm_Speciality, one with 5 neighbors, other with 35, as KNN Imputer setting.
@@ -54,7 +53,7 @@ Second issue was related to features that should be taken into common array. Aft
 
 It was insightful that KNN Imputer transforms all data into floats and after imputation missing data might be distributed as floats while we need them to be integers to be translated into categories. There are two ways of dealing with this: rounding up or cutting decimals. Rounding up according to arithmetical rules was applied.
 
-Full comparison of original Ntm_Speciality and after work of KNN Imputer is presented on the linked [pdf](https://github.com/Omar-Safwat/HealthCare_project/Week_9/knn_imputation_by_concomb_comparision.pdf).
+Full comparison of original Ntm_Speciality and after work of KNN Imputer is presented on the linked [pdf](https://github.com/Omar-Safwat/HealthCare_project/blob/main/Week_9/knn_imputation_by_concomb_comparision.pdf).
 
 Apart from number of neighbors unknown were distributed only over top 9 categories, as following:
 | Ntm_Speciality | Original DF | After KNN 5 neigh. | After KNN 35 neigh. |
@@ -73,7 +72,8 @@ Apart from number of neighbors unknown were distributed only over top 9 categori
 ## Outliers
 
 **Larisa approach**<br> 
-[Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)
+[Predictions based on logistic regression & Outliers](https://github.com/Omar-Safwat/HealthCare_project/blob/main/Week_9/LogisticRegressionPredictions%2BOutliers.ipynb)<br>
+
 There have been 2 ways of dealing with outliers:<br> 
 1. Deleting entirely the columns that has only 2 classes and one class has >90% frequency.<br> 
 2. Deleting the rows that contained outliers. <br> 
