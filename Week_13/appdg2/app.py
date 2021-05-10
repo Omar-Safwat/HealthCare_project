@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template, send_file, redirect, url_for
 from werkzeug.utils import secure_filename
 import pandas as pd
+import json
+from dataset_validation import validate_cols #Omar's module to validate uploaded dataset
 
 app = Flask(__name__)
 
@@ -23,6 +25,11 @@ def download_csv_template():
 #every upload file will be saved with this name
 global uploaded_doc_name
 uploaded_doc_name = 'downloaded.csv'
+
+df_user = pd.read_csv(uploaded_doc_name)
+# Validate dataset
+validation_output = validate_cols(df_user) #returns a string object to be displayed to the user. Either success of failure.
+
 
 @app.route('/upload-dataset', methods=['GET', 'POST'])
 def upload_file():
