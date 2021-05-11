@@ -8,12 +8,14 @@ Load json template, and store it in a dictionary.
 2- Iterate through all the columns of the uploaded file and check each column w
 your template dictionary.
 """
-def validate_cols(user_data):
+def validate_cols(uploaded_document):
     """
     Function args
     -------------
-    user_data: A pandas dataframe for uploaded data by the user.
+    uploaded_document: Name of the csv file uploaded by the user.
     """
+    #Load data using pandas
+    user_data = pd.read_csv(uploaded_document)
 
     #Load JSON schema for the dataframe
     with open('template.json', 'r') as file:
