@@ -18,7 +18,7 @@ def validate_cols(uploaded_document):
     uploaded_document: Name of the csv file uploaded by the user.
     """
     #Load data using pandas
-    user_data = pd.read_csv(uploaded_document)
+    user_data = pd.read_excel('Healthcare_dataset.xlsx', engine='openpyxl')
 
     if user_data.isnull().any().any():
         return "Dataset validation failed: Data contains missing values"
