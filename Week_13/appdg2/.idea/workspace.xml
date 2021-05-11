@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdd29c6a-4c5a-4a29-9930-c4b2b5e0aa9b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Larisa-Findings/data_training.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/css/style_redirect_upload_success.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Larisa-Findings/Larisa_Findings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Larisa-Findings/Larisa_Findings.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/appdg2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appdg2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
