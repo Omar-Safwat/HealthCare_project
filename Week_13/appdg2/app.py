@@ -26,9 +26,8 @@ def download_csv_template():
 global uploaded_doc_name
 uploaded_doc_name = 'downloaded.csv'
 
-df_user = pd.read_csv(uploaded_doc_name)
 # Validate dataset
-validation_output = validate_cols(df_user) #returns a string object to be displayed to the user. Either success of failure.
+validation_output = validate_cols(uploaded_doc_name) #returns a string object to be displayed to the user. Either success of failure.
 
 
 @app.route('/upload-dataset', methods=['GET', 'POST'])
