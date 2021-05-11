@@ -7,7 +7,7 @@ from dataset_validation import validate_cols #Omar's module to validate uploaded
 app = Flask(__name__)
 
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('home.html')
 
@@ -26,20 +26,21 @@ def download_csv_template():
 global uploaded_doc_name
 uploaded_doc_name = 'downloaded.csv'
 
-# Validate dataset
-validation_output = validate_cols(uploaded_doc_name) #returns a string object to be displayed to the user. Either success of failure.
-
-
 @app.route('/upload-dataset', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
         f.save(secure_filename(uploaded_doc_name))
-        return redirect(url_for('uploaded_successfully'))
 
-@app.route('/uploaded-successfully')
-def uploaded_successfully():
-    return render_template('redirect_upload_success.html')
+        # Validate dataset
+        # returns a string object to be displayed to the user. Either success of failure.
+        validation_output = validate_cols(uploaded_doc_name)
+
+        return redirect(url_for('uploaded_successfully',validation_output=validation_output))
+
+@app.route('/uploaded-successfully/<validation_output>')
+def uploaded_successfully(validation_output):
+    return render_template('redirect_upload_success.html',validation_output=validation_output)
 
 # save predicted file as csv and update name
 global predicted_file_name_csv
