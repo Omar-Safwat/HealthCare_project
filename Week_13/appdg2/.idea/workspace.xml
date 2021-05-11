@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdd29c6a-4c5a-4a29-9930-c4b2b5e0aa9b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/appdg2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appdg2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaded.csv" beforeDir="false" afterPath="$PROJECT_DIR$/downloaded.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +83,7 @@
       <updated>1620590787800</updated>
       <workItem from="1620681189763" duration="633000" />
       <workItem from="1620764895141" duration="475000" />
+      <workItem from="1620766217948" duration="648000" />
     </task>
     <servers />
   </component>
@@ -98,6 +103,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/appdg2$app.coverage" NAME="app Coverage Results" MODIFIED="1620681244948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/appdg2$app.coverage" NAME="app Coverage Results" MODIFIED="1620766783589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

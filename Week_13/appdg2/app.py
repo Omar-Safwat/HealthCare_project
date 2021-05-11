@@ -2,9 +2,13 @@ from flask import Flask, request, render_template, send_file, redirect, url_for
 from werkzeug.utils import secure_filename
 import pandas as pd
 import json
+import pickle
 from dataset_validation import validate_cols #Omar's module to validate uploaded dataset
 
+
 app = Flask(__name__)
+with open('DrugLR.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 
 @app.route('/')
@@ -35,6 +39,9 @@ def upload_file():
         # Validate dataset
         # returns a string object to be displayed to the user. Either success of failure.
         validation_output = validate_cols(uploaded_doc_name)
+
+        # Classify dataset
+        classification = model.predict(uploaded_doc_name)
 
         return redirect(url_for('uploaded_successfully',validation_output=validation_output))
 
