@@ -10,6 +10,15 @@ app = Flask(__name__)
 with open('DrugLR.pkl', 'rb') as f:
     model = pickle.load(f)
 
+# every upload file will be saved with this name
+global template_name
+template_name = 'template_dataset.xlsx'
+# every upload file will be saved with this name
+global uploaded_doc_name
+uploaded_doc_name = 'downloaded.xlsx'
+# save predicted file as csv and update name
+global predicted_file_name_csv
+predicted_file_name_csv = 'prediction.xlsx'
 
 @app.route('/')
 def home():
@@ -23,19 +32,10 @@ def about():
 
 @app.route('/download-template', methods=['POST'])
 def download_csv_template():
-    return send_file('template_dataset.xlsx',
+    return send_file(template_name,
                      mimetype='text/csv',
-                     attachment_filename='template_dataset.xlsx',
+                     attachment_filename=template_name,
                      as_attachment=True)
-
-
-# every upload file will be saved with this name
-global uploaded_doc_name
-uploaded_doc_name = 'downloaded.xlsx'
-# save predicted file as csv and update name
-global predicted_file_name_csv
-predicted_file_name_csv = 'test_prediction.xlsx'
-
 
 @app.route('/upload-dataset', methods=['GET', 'POST'])
 def upload_file():
@@ -50,9 +50,11 @@ def upload_file():
         user_data = pd.read_excel(uploaded_doc_name, engine='openpyxl', index_col=None)
         encoded_dataset = encode_dataset(user_data)
         encoded_dataset.to_excel('encoded.xlsx')
-
         classification = model.predict(encoded_dataset)
-        classification.to_excel(predicted_file_name_csv)
+        classification_df= pd.DataFrame()
+        classification_df['Prediction'] = classification
+        prediction_df = decode_dataset(classification_df)
+        prediction_df.to_excel(predicted_file_name_csv)
 
         return redirect(url_for('uploaded_successfully', validation_output=validation_output))
 

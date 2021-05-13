@@ -29,6 +29,9 @@ def validate_cols(uploaded_document):
     myTemplate = pd.DataFrame(myTemplate)   #Convert it to DataFrame for easier acces
     myTemplate.set_index('Columns', inplace=True)
 
+    list(set(user_data.columns).difference(list(myTemplate.index)))
+
+
     #Load dict() mapping from Pickle file
     with open('columns_encode.pickle', 'rb') as file:
         columns_map = pickle.load(file)
@@ -49,16 +52,17 @@ def validate_cols(uploaded_document):
                     return(f"{col} Column Validation failed:\n" \
                         f"The following values are invalid:\n" \
                         f"{user_data[col].unique()[invalid]}")
-            
-                 
+
+
         return("Columns validation was successful")
     else:
         missing_in_json = list(set(user_data.columns).difference(list(myTemplate.index)))
-        if not missing_in_json:
+        if  len(missing_in_json) > 0:
             return('Columns validation has failed\nThe following columns are not needed: ', missing_in_json)
         else:
             missing_in_data = list(set(list(myTemplate.index)).difference(user_data.columns))
-            return('Columns validation has failed\nThe following columns were not in your data: ', missing_in_data)
+            if len(missing_in_data) > 0:
+                return('Columns validation has failed\nThe following columns were not in your data: ', missing_in_data)
 
 
 
