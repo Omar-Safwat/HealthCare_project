@@ -49,9 +49,9 @@ def validate_cols(uploaded_document):
             if str(user_data[col].dtype) == 'object':
                 invalid = np.logical_not(np.isin(user_data[col].unique(), list(columns_map[col].keys()))) #Gathers invvalues not in dictionary
                 if invalid.any() == True:
-                    return(f"{col} Column Validation failed:\n" \
-                        f"The following values are invalid:\n" \
-                        f"{user_data[col].unique()[invalid]}")
+                    return(f"{col} Column Validation failed." \
+                        f" The following values are invalid." \
+                        f"  {user_data[col].unique()[invalid]}")
 
 
         return("Columns validation was successful")
