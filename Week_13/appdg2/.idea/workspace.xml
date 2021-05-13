@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdd29c6a-4c5a-4a29-9930-c4b2b5e0aa9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/downloaded.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/downloaded.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/encoded.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/encoded.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_dataset.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/template_dataset.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

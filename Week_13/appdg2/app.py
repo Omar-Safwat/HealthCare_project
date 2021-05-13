@@ -52,7 +52,7 @@ def upload_file():
         encoded_dataset.to_excel('encoded.xlsx')
         classification = model.predict(encoded_dataset)
         classification_df= pd.DataFrame()
-        classification_df['Prediction'] = classification
+        classification_df['Persistency_Flag'] = classification
         prediction_df = decode_dataset(classification_df)
         prediction_df.to_excel(predicted_file_name_csv)
 
